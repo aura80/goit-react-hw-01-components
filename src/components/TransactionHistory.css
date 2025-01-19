@@ -1,4 +1,4 @@
- .transaction-history {
+.transaction-history {
     width: 100%;
     max-width: 800px;
     border-radius: 5px;
@@ -8,6 +8,8 @@
     margin: 60px auto 0 auto;
     font-size: 16px;
     font-weight: 200;
+    border-collapse: collapse;  /* delete all the white spaces between rows and columns <=> border-spacing*/
+    overflow: hidden; /*to see border-radius*/
 }
 
 th {
@@ -15,22 +17,18 @@ th {
     padding: 12px 15px;
     background-color: #35d1df;
     color: #fff;
+    border-right: 1px solid #fff;
 }
 
 td {
     text-transform: capitalize;
     padding: 12px 15px;
+    border-right: 1px solid #cecbcb;
 } 
 
-/* TransactionHistory.css */
-
-
-.transaction-history td {
-  
-  /* border: 1px solid red; */
-    /* border-right: #d1d1d1; */
-    border-right: #d1d1d1;
-
+.transaction-history th:last-child,
+.transaction-history td:last-child {
+    border-right: none;
 }
 
 .transaction-history tbody tr {
